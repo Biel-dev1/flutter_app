@@ -18,7 +18,11 @@ class AccessApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF2196F3)),
-        appBarTheme: const AppBarTheme(elevation: 0, backgroundColor: Color(0xFF2196F3), foregroundColor: Colors.white),
+        appBarTheme: const AppBarTheme(
+          elevation: 0,
+          backgroundColor: Color(0xFF2196F3),
+          foregroundColor: Colors.white,
+        ),
       ),
       home: const HomePage(),
       debugShowCheckedModeBanner: false,
@@ -98,7 +102,11 @@ class _HomePageState extends State<HomePage> {
             children: [
               Text('📸 Galeria de Fotos', style: Theme.of(context).textTheme.titleLarge?.copyWith(color: const Color(0xFF2196F3), fontWeight: FontWeight.bold)),
               const SizedBox(height: 12),
-              ElevatedButton.icon(onPressed: _pickImage, icon: const Icon(Icons.photo_library), label: const Text('Escolher Foto')),
+              ElevatedButton.icon(
+                onPressed: _pickImage,
+                icon: const Icon(Icons.photo_library),
+                label: const Text('Escolher Foto'),
+              ),
               const SizedBox(height: 16),
               Container(
                 height: 200,
@@ -110,15 +118,28 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(height: 32),
               Text('🔐 Acessibilidade', style: Theme.of(context).textTheme.titleLarge?.copyWith(color: const Color(0xFFFF9800), fontWeight: FontWeight.bold)),
               const SizedBox(height: 12),
-              ElevatedButton.icon(onPressed: _openAccessibilitySettings, icon: const Icon(Icons.security), label: const Text('Ativar Acessibilidade'), style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFFFF9800))),
+              ElevatedButton.icon(
+                onPressed: _openAccessibilitySettings,
+                icon: const Icon(Icons.security),
+                label: const Text('Ativar Acessibilidade'),
+                style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFFFF9800)),
+              ),
               const SizedBox(height: 12),
-              ElevatedButton.icon(onPressed: _isLoading ? null : _checkAccessibilityStatus, icon: const Icon(Icons.refresh), label: const Text('Verificar Status'), style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF4CAF50))),
+              ElevatedButton.icon(
+                onPressed: _isLoading ? null : _checkAccessibilityStatus,
+                icon: const Icon(Icons.refresh),
+                label: const Text('Verificar Status'),
+                style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF4CAF50)),
+              ),
               const SizedBox(height: 24),
               Card(
                 elevation: 4,
                 child: Container(
                   padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: _isAccessibilityEnabled ? Colors.green[50] : Colors.red[50]),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: _isAccessibilityEnabled ? Colors.green[50] : Colors.red[50],
+                  ),
                   child: Column(
                     children: [
                       Icon(_isAccessibilityEnabled ? Icons.check_circle : Icons.cancel, size: 48, color: _isAccessibilityEnabled ? Colors.green : Colors.red),

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Access App</string>
+    <string name="app_title">📱 Access App</string>
+    <string name="gallery_label">Galeria de Fotos</string>
+    <string name="pick_photo">Escolher Foto</string>
+    <string name="selected_photo">Foto selecionada</string>
+    <string name="accessibility_label">Permissão de Acessibilidade</string>
+    <string name="enable_accessibility">Ativar Acessibilidade</string>
+    <string name="check_status">Verificar Status</string>
+    <string name="checking_status">Verificando...</string>
+</resources>

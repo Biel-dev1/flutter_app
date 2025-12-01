@@ -1,0 +1,3 @@
+-keep class com.accessapp.** { *; }
+-keep class androidx.** { *; }
+-keepattributes SourceFile,LineNumberTable
